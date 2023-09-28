@@ -23,7 +23,7 @@ public class Variant17 {
 		if(number1 < 0) {
 			throw new IllegalArgumentException("Num is not correct");
 		}
-		return (number1 % 2 == 1) && (number1 > 99);
+		return number1 % 2 == 1 && number1 > 99;
 	}
 
 
@@ -45,18 +45,43 @@ public class Variant17 {
 	public String switchTask(int number1) {
 		String result = "";
 		if(number1 < 10 || number1 > 40) throw new IllegalArgumentException("Number is less than 10 or bigger than 40");
+		switch (number1 % 10) {
+			case 1 -> result = "учбове завдання";
+			case 2, 3, 4 -> result = "учбових завдання";
+			case 5, 6, 7, 8, 9 -> result = "учбових завдань";
+		}
 		if(number1 / 10 == 1){
 			switch (number1) {
-				case 10 -> result += "Десять ";
-				case 11 -> result += "Одинадцять ";
-				case 12 -> result += "Дванадцять ";
-				case 13 -> result += "Тринадцять ";
-				case 14 -> result += "Чотирнадцять ";
-				case 15 -> result += "П'ятнадцять ";
-				case 16 -> result += "Шістнадцять ";
-				case 17 -> result += "Сімнадцять ";
-				case 18 -> result += "Вісімнадцять ";
-				case 19 -> result += "Дев'ятнадцять ";
+				case 10 -> {
+					return "Десять " + result;
+				}
+				case 11 -> {
+					return "Одинадцять " + result;
+				}
+				case 12 -> {
+					return "Дванадцять " + result;
+				}
+				case 13 -> {
+					return "Тринадцять " + result;
+				}
+				case 14 -> {
+					return "Чотирнадцять " + result;
+				}
+				case 15 -> {
+					return "П'ятнадцять " + result;
+				}
+				case 16 -> {
+					return "Шістнадцять " + result;
+				}
+				case 17 -> {
+					return "Сімнадцять " + result;
+				}
+				case 18 -> {
+					return "Вісімнадцять " + result;
+				}
+				case 19 -> {
+					return "Дев'ятнадцять " + result;
+				}
 			}
 		}
 		else{
@@ -66,21 +91,34 @@ public class Variant17 {
 				case 4 -> result += "Сорок ";
 			}
 			switch (number1 % 10) {
-				case 1 -> result += "одне ";
-				case 2 -> result += "два ";
-				case 3 -> result += "три ";
-				case 4 -> result += "чотири ";
-				case 5 -> result += "п'ять ";
-				case 6 -> result += "шість ";
-				case 7 -> result += "сім ";
-				case 8 -> result += "вісім ";
-				case 9 -> result += "дев'ять ";
+				case 1 -> {
+					return result + "одне ";
+				}
+				case 2 -> {
+					return result + "два ";
+				}
+				case 3 -> {
+					return result + "три ";
+				}
+				case 4 -> {
+					return result + "чотири ";
+				}
+				case 5 -> {
+					return result + "п'ять ";
+				}
+				case 6 -> {
+					return result + "шість ";
+				}
+				case 7 -> {
+					return result + "сім ";
+				}
+				case 8 -> {
+					return result + "вісім ";
+				}
+				case 9 -> {
+					return result + "дев'ять ";
+				}
 			}
-		}
-		switch (number1 % 10) {
-			case 1 -> result += "учбове завдання";
-			case 2, 3, 4 -> result += "учбових завдання";
-			case 5, 6, 7, 8, 9 -> result += "учбових завдань";
 		}
 		return result;
 	}
@@ -95,8 +133,10 @@ public class Variant17 {
 	public double forTask(int A, int n) {
 		if(n <= 0) throw new IllegalArgumentException("n <= 0");
 		int result = 0;
+		int tempRes = 1;
 		for(int i = 0; i < n; i++){
-			result += (int) Math.pow(A, i);
+			result += tempRes;
+			tempRes *= A;
 		}
 		return result;
 	}
@@ -158,6 +198,5 @@ public class Variant17 {
 	public static void main(String... strings) {
 		System.out.println("Start of zero lab");
 		System.out.println("Done!!!");
-		System.out.println(new Variant17().twoDimensionArrayTask(new int[][]{{1, 2, 3, 4}, {-4, -5, -6, -0}, {-12, 32, 41, 0}, {9, 8, 7, 6}}, 4, 4, 3));
 	}
 }
