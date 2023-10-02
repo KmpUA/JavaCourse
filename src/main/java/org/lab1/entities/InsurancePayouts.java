@@ -6,12 +6,13 @@ import lombok.Setter;
 
 import java.util.Date;
 import java.util.Objects;
+import java.util.UUID;
 
 @Builder
 @Getter
 @Setter
 public class InsurancePayouts {
-	private int id;
+	private UUID id;
 	private Date payoutDate;
 	private double payoutSize;
 
@@ -33,10 +34,10 @@ public class InsurancePayouts {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(getId(), getPayoutDate(), getPayoutSize());
+		return Objects.hash(getPayoutDate(), getPayoutSize());
 	}
 
-	public InsurancePayouts(int id, Date payoutDate, double payoutSize) {
+	public InsurancePayouts(UUID id, Date payoutDate, double payoutSize) {
 		this.setId(id);
 		this.setPayoutDate(payoutDate);
 		this.setPayoutSize(payoutSize);

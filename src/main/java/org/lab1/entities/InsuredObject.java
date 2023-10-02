@@ -5,12 +5,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Objects;
+import java.util.UUID;
 
 @Getter
 @Setter
 @Builder
 public class InsuredObject {
-	private int id;
+	private UUID id;
 	private String name;
 	private String description;
 
@@ -32,10 +33,10 @@ public class InsuredObject {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(getId(), getName(), getDescription());
+		return Objects.hash(getName(), getDescription());
 	}
 
-	public InsuredObject(int id, String name, String description) {
+	public InsuredObject(UUID id, String name, String description) {
 		this.setId(id);
 		this.setName(name);
 		this.setDescription(description);

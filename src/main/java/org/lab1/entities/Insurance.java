@@ -7,12 +7,13 @@ import lombok.Setter;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 
 @Builder
 @Getter
 @Setter
 public class Insurance {
-	private int id;
+	private UUID id;
 	private Client client;
 	private List<InsuredObject> objects;
 	private List<InsuranceType> types;
@@ -37,15 +38,15 @@ public class Insurance {
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (!(o instanceof Insurance insurance)) return false;
-		return getId() == insurance.getId() && Double.compare(getSize(), insurance.getSize()) == 0 && Objects.equals(getClient(), insurance.getClient()) && Objects.equals(getObjects(), insurance.getObjects()) && Objects.equals(getTypes(), insurance.getTypes()) && Objects.equals(getWorker(), insurance.getWorker()) && Objects.equals(getTerm(), insurance.getTerm());
+		return getId() == insurance.getId() && Objects.equals(getClient(), insurance.getClient()) && Objects.equals(getWorker(), insurance.getWorker());
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(getId(), getClient(), getObjects(), getTypes(), getWorker(), getTerm(), getSize());
+		return Objects.hash(getClient(), getWorker());
 	}
 
-	public Insurance(int id, Client client, List<InsuredObject> objects, List<InsuranceType> types, Worker worker, Date term, double size) {
+	public Insurance(UUID id, Client client, List<InsuredObject> objects, List<InsuranceType> types, Worker worker, Date term, double size) {
 		this.setId(id);
 		this.setClient(client);
 		this.setObjects(objects);

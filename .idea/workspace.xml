@@ -4,21 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="282f44b1-9e67-4f22-80f4-e3f22960e6be" name="Changes" comment="Lab0 final variant">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Education.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Insurance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/InsurancePayouts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/InsuranceType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/InsuredObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/PersonalParticulars.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Worker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/enums/FamilyStatusENUM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/enums/WorkPositionsENUM.java" afterDir="false" />
+    <list default="true" id="282f44b1-9e67-4f22-80f4-e3f22960e6be" name="Changes" comment="Lab0 final">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/repos/ClientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/EntitySerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/JsonSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/LocalDateTimeTypeAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/SerializationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/TxtSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/XmlSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/services/ClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/lab1/entities/ClientTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/lab1/entities/JsonSerializerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/lab1/entities/XmlSerializerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Education.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Education.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Insurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Insurance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/InsurancePayouts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/InsurancePayouts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/InsuranceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/InsuranceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/InsuredObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/InsuredObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/PersonalParticulars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/PersonalParticulars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Worker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +58,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
+        <option value="TestNG Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -81,22 +92,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "TestNG",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG": "",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/delam/JavaLabs/Variant17",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.lab1.entities" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="First commit">
@@ -117,6 +139,18 @@
       <workItem from="1694771794254" duration="876000" />
       <workItem from="1695041010509" duration="808000" />
       <workItem from="1695048426915" duration="1700000" />
+      <workItem from="1695050497576" duration="115000" />
+      <workItem from="1695124902752" duration="21000" />
+      <workItem from="1695229351260" duration="914000" />
+      <workItem from="1695306293420" duration="400000" />
+      <workItem from="1695306719148" duration="5000" />
+      <workItem from="1695321733562" duration="10000" />
+      <workItem from="1695377160130" duration="1727000" />
+      <workItem from="1695632643653" duration="8602000" />
+      <workItem from="1695660920523" duration="781000" />
+      <workItem from="1695740172003" duration="16000" />
+      <workItem from="1695907678955" duration="5489000" />
+      <workItem from="1696237028238" duration="6485000" />
     </task>
     <task id="LOCAL-00002" summary="Lab0 final variant">
       <option name="closed" value="true" />
@@ -126,7 +160,23 @@
       <option name="project" value="LOCAL" />
       <updated>1694706613714</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Lab1 first variant">
+      <option name="closed" value="true" />
+      <created>1695050607455</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695050607455</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Lab0 final">
+      <option name="closed" value="true" />
+      <created>1695908191945</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695908191945</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +202,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="Lab0 final variant" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab0 final variant" />
+    <MESSAGE value="Lab1 first variant" />
+    <MESSAGE value="Lab0 final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab0 final" />
   </component>
 </project>
