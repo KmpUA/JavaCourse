@@ -14,6 +14,7 @@ public class JsonSerializer<T> implements EntitySerializer<T> {
 
 	public JsonSerializer() {
 		this.gson = new GsonBuilder()
+				.setPrettyPrinting()
 				.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeTypeAdapter())
 				.create();
 	}

@@ -14,7 +14,7 @@ public class Main {
 	public static void main(String[] args) throws SerializationException {
 		LocalDateTime localDateTime = LocalDateTime.of(2005, 7, 10, 0, 0, 0);
 		LocalDateTime localDateTime2 = LocalDateTime.of(1991, 12, 30, 0, 0, 0);
-		Client client1 = new Client.Builder("Maxym", "Paraniuk", localDateTime2)
+		Client client1 = new Client.Builder("Maxym", "Aaraniuk", localDateTime2)
 				.setPhoneNumber("+380958194039")
 				.setEmail("delamakcima1@gmail.com")
 				.build();
@@ -31,8 +31,8 @@ public class Main {
 
 		ClientService clientService = new ClientService(clients);
 		System.out.println("-------------Service debug---------------");
-		clientService.sortClientsByAgeWithStream().forEach(System.out::println);
-		TxtSerializer txtSerializer = new TxtSerializer();
+		clientService.sortClientsWithStream().forEach(System.out::println);
+		TxtSerializer<Client> txtSerializer = new TxtSerializer<Client>();
 		txtSerializer.serialize(client1, "test.txt");
 		System.out.println("-------------TxtSerializer debug---------------");
 		System.out.println(txtSerializer.deserialize("test.txt"));

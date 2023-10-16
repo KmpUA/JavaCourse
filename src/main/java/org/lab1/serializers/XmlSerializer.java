@@ -1,70 +1,34 @@
 package org.lab1.serializers;
 
-import java.beans.*;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+
+import java.io.File;
 import java.io.IOException;
-import java.time.LocalDateTime;
-import java.util.HashSet;
-import java.util.UUID;
 
 public class XmlSerializer<T> implements EntitySerializer<T> {
+	private final XmlMapper xmlMapper;
 
-	public static class UUIDPersistenceDelegate extends PersistenceDelegate {
-		private final HashSet<UUID> hashesWritten = new HashSet<UUID>();
-
-		public Expression instantiate(Object oldInstance, Encoder out) {
-			UUID id = (UUID) oldInstance;
-			hashesWritten.add(id);
-			return new Expression(oldInstance, UUID.class, "fromString", new Object[]{id.toString()});
-		}
-
-		protected boolean mutatesTo(Object oldInstance, Object newInstance) {
-			return hashesWritten.contains(oldInstance);
-		}
+	public XmlSerializer() {
+		xmlMapper = new XmlMapper();
 	}
 	@Override
 	public void serialize(T entity, String filePath) throws SerializationException {
+		xmlMapper.registerModule(new JavaTimeModule());
+		xmlMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+		xmlMapper.enable(SerializationFeature.INDENT_OUTPUT);
 		try {
-			FileOutputStream fos = new FileOutputStream(filePath);
-			XMLEncoder encoder = new XMLEncoder(fos);
-
-			encoder.setPersistenceDelegate(LocalDateTime.class,
-					new PersistenceDelegate() {
-						@Override
-						protected Expression instantiate(Object localDate, Encoder encdr) {
-							return new Expression(localDate,
-									LocalDateTime.class,
-									"parse",
-									new Object[]{localDate.toString()});
-						}
-
-					});
-			encoder.setPersistenceDelegate(UUID.class, new UUIDPersistenceDelegate());
-
-			encoder.setExceptionListener(new ExceptionListener() {
-				public void exceptionThrown(Exception e) {
-					System.out.println("Exception! :"+e.toString());
-				}
-			});
-
-			encoder.writeObject(entity);
-			encoder.close();
-			fos.close();
+			xmlMapper.writeValue(new File(filePath), entity);
 		} catch (IOException e) {
-			throw new SerializationException("Failed to serialize to XML", e);
+			throw new RuntimeException(e);
 		}
 	}
 
 	@Override
 	public T deserialize(Class<T> entityType, String filePath) throws SerializationException {
 		try {
-			FileInputStream fis = new FileInputStream(filePath);
-			XMLDecoder decoder = new XMLDecoder(fis);
-			T decodedSettings = (T) decoder.readObject();
-			decoder.close();
-			fis.close();
-			return decodedSettings;
+			return xmlMapper.readValue(new File(filePath), entityType);
 		} catch (IOException e) {
 			throw new SerializationException("Failed to deserialize from XML", e);
 		}

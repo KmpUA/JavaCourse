@@ -1,15 +1,12 @@
 package org.lab1.entities;
 
-import lombok.*;
 import org.lab1.enums.WorkPositionsENUM;
 
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
 
-@Getter
-@Setter
-public class PersonalParticulars extends Education{
+public class PersonalParticulars extends Education {
 	private UUID id;
 	public String email;
 	public Date workingSince;
@@ -53,4 +50,43 @@ public class PersonalParticulars extends Education{
 	}
 
 
+	public UUID getId() {
+		return this.id;
+	}
+
+	public String getEmail() {
+		return this.email;
+	}
+
+	public Date getWorkingSince() {
+		return this.workingSince;
+	}
+
+	public WorkPositionsENUM getPosition() {
+		return this.position;
+	}
+
+	public double getSalary() {
+		return this.salary;
+	}
+
+	public void setId(UUID id) {
+		this.id = id;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public void setWorkingSince(Date workingSince) {
+		this.workingSince = workingSince;
+	}
+
+	public void setPosition(WorkPositionsENUM position) {
+		this.position = position;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
 }

@@ -1,5 +1,6 @@
-package org.lab1.entities;
+package org.lab1.serializers;
 
+import org.lab1.entities.Client;
 import org.lab1.serializers.JsonSerializer;
 import org.lab1.serializers.SerializationException;
 import org.testng.annotations.Test;

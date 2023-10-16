@@ -4,21 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="282f44b1-9e67-4f22-80f4-e3f22960e6be" name="Changes" comment="Lab0 final">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/repos/ClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/EntitySerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/JsonSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/LocalDateTimeTypeAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/SerializationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/TxtSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/XmlSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/services/ClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/lab1/entities/ClientTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/lab1/entities/JsonSerializerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/lab1/entities/XmlSerializerTest.java" afterDir="false" />
+    <list default="true" id="282f44b1-9e67-4f22-80f4-e3f22960e6be" name="Changes" comment="Serializer fixes and Comparator/Stream lab">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/impl/InsuranceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/services/InsuranceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/services/WorkerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/lab1/impl/InsuranceServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/lab1/serializers/TxtSerializerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/lab1/services/ClientServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Education.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Education.java" afterDir="false" />
@@ -28,6 +22,14 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/InsuredObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/InsuredObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/PersonalParticulars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/PersonalParticulars.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/repos/ClientRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/JsonSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/JsonSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/LocalDateTimeTypeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/LocalDateTimeTypeAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/TxtSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/TxtSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/XmlSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/XmlSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/services/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/services/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/lab1/entities/JsonSerializerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/lab1/serializers/JsonSerializerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/lab1/entities/XmlSerializerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/lab1/serializers/XmlSerializerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,12 +61,13 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="TestNG Test Class" />
         <option value="Class" />
+        <option value="TestNG Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -81,8 +84,11 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
+  &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2VOJ6KcQtJYKuUGwRO3xbNAITjt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -92,32 +98,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "TestNG",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG": "",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/delam/JavaLabs/Variant17",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;TestNG&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/delam/JavaLabs/Variant17&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.lab1.impl" />
+      <recent name="org.lab1.serializers" />
+      <recent name="org.lab1.services" />
       <recent name="org.lab1.entities" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Insurance" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.lab1.Main" />
+      <module name="Variant17.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -150,7 +172,18 @@
       <workItem from="1695660920523" duration="781000" />
       <workItem from="1695740172003" duration="16000" />
       <workItem from="1695907678955" duration="5489000" />
-      <workItem from="1696237028238" duration="6485000" />
+      <workItem from="1696237028238" duration="12209000" />
+      <workItem from="1696338348208" duration="7000" />
+      <workItem from="1697211022086" duration="22000" />
+      <workItem from="1697272634144" duration="2524000" />
+      <workItem from="1697276333503" duration="102000" />
+      <workItem from="1697276443607" duration="95000" />
+      <workItem from="1697276546390" duration="252000" />
+      <workItem from="1697299544881" duration="598000" />
+      <workItem from="1697310545518" duration="115000" />
+      <workItem from="1697402503843" duration="1652000" />
+      <workItem from="1697447577148" duration="10697000" />
+      <workItem from="1697471302964" duration="114000" />
     </task>
     <task id="LOCAL-00002" summary="Lab0 final variant">
       <option name="closed" value="true" />
@@ -176,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695908191945</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Serializer fixes and Comparator/Stream lab">
+      <option name="closed" value="true" />
+      <created>1696244016428</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696244016428</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +245,7 @@
     <MESSAGE value="Lab0 final variant" />
     <MESSAGE value="Lab1 first variant" />
     <MESSAGE value="Lab0 final" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab0 final" />
+    <MESSAGE value="Serializer fixes and Comparator/Stream lab" />
+    <option name="LAST_COMMIT_MESSAGE" value="Serializer fixes and Comparator/Stream lab" />
   </component>
 </project>

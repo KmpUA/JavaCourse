@@ -17,7 +17,7 @@ import java.util.regex.Pattern;
  * Also, it has working builder, which make us able to create new objects of this class
  * more comfortable
  */
-public class Client implements Comparable<Client>{
+public class Client implements Comparable<Client> {
 	private UUID id;
 	private String firstName;
 	private String lastName;
@@ -30,11 +30,40 @@ public class Client implements Comparable<Client>{
 
 	@Override
 	public int compareTo(Client client) {
-		if(this.firstName.charAt(0) != client.firstName.charAt(0))return this.firstName.charAt(0) - client.firstName.charAt(0);
+		if (this.firstName.charAt(0) != client.firstName.charAt(0))
+			return this.firstName.charAt(0) - client.firstName.charAt(0);
 		else return this.lastName.charAt(0) - client.lastName.charAt(0);
 	}
 
-	public static class Builder{
+	public UUID getId() {
+		return this.id;
+	}
+
+	public String getFirstName() {
+		return this.firstName;
+	}
+
+	public String getLastName() {
+		return this.lastName;
+	}
+
+	public LocalDateTime getBirthdate() {
+		return this.birthdate;
+	}
+
+	public String getAddress() {
+		return this.address;
+	}
+
+	public String getPhoneNumber() {
+		return this.phoneNumber;
+	}
+
+	public String getEmail() {
+		return this.email;
+	}
+
+	public static class Builder {
 		private final String firstName;
 		private final String lastName;
 		private final LocalDateTime birthdate;
@@ -42,47 +71,48 @@ public class Client implements Comparable<Client>{
 		private String phoneNumber = "";
 		private String email = "";
 
-		public Builder(String firstName, String lastName, LocalDateTime birthdate){
-			if(firstName == null || lastName == null || birthdate == null) throw new IllegalArgumentException("Null arguments");
+		public Builder(String firstName, String lastName, LocalDateTime birthdate) {
+			if (firstName == null || lastName == null || birthdate == null)
+				throw new IllegalArgumentException("Null arguments");
 			else if (ChronoUnit.YEARS.between(birthdate, LocalDateTime.now()) < 18) {
 				throw new IllegalArgumentException("Age under 18: " + ChronoUnit.YEARS.between(birthdate, LocalDateTime.now()));
-			} else{
+			} else {
 				this.firstName = firstName;
 				this.lastName = lastName;
 				this.birthdate = birthdate;
 			}
 		}
 
-		public Builder setAddress(String value){
-			if(address == null) throw new IllegalArgumentException("Null argument");
+		public Builder setAddress(String value) {
+			if (address == null) throw new IllegalArgumentException("Null argument");
 			else address = value;
 			return this;
 		}
 
-		public Builder setPhoneNumber(String value){
+		public Builder setPhoneNumber(String value) {
 			Pattern pattern = Pattern.compile("^(\\+\\d{1,3}( )?)?((\\(\\d{3}\\))|\\d{3})[- .]?\\d{3}[- .]?\\d{4}$");
 			Matcher matcher = pattern.matcher(value);
-			if(!matcher.matches()) throw new IllegalArgumentException("Wrong phone number: " + value);
+			if (!matcher.matches()) throw new IllegalArgumentException("Wrong phone number: " + value);
 			else phoneNumber = value;
 			return this;
 		}
 
-		public Builder setEmail(String value){
+		public Builder setEmail(String value) {
 			Pattern regexPattern = Pattern.compile("^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
 					+ "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$");
 			Matcher matcher = regexPattern.matcher(value);
-			if(!matcher.matches()) throw new IllegalArgumentException("Wrong email format :" + value);
+			if (!matcher.matches()) throw new IllegalArgumentException("Wrong email format :" + value);
 			else email = value;
 			return this;
 		}
 
-		public Client build(){
+		public Client build() {
 			return new Client(this);
 		}
 
 	}
 
-	public Client(Builder builder){
+	public Client(Builder builder) {
 		id = UUID.randomUUID();
 		firstName = builder.firstName;
 		lastName = builder.lastName;
@@ -92,7 +122,8 @@ public class Client implements Comparable<Client>{
 		email = builder.email;
 	}
 
-	public  Client(){}
+	public Client() {
+	}
 
 	/**
 	 * @return String format of given object
@@ -129,56 +160,28 @@ public class Client implements Comparable<Client>{
 		return Objects.hash(getFirstName(), getLastName(), getBirthdate());
 	}
 
-	public UUID getId() {
-		return id;
-	}
-
 	public void setId(UUID id) {
 		this.id = id;
-	}
-
-	public String getFirstName() {
-		return firstName;
 	}
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
-	public String getLastName() {
-		return lastName;
-	}
-
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-	}
-
-	public LocalDateTime getBirthdate() {
-		return birthdate;
 	}
 
 	public void setBirthdate(LocalDateTime birthdate) {
 		this.birthdate = birthdate;
 	}
 
-	public String getAddress() {
-		return address;
-	}
-
 	public void setAddress(String address) {
 		this.address = address;
 	}
 
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
-
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
-	}
-
-	public String getEmail() {
-		return email;
 	}
 
 	public void setEmail(String email) {
