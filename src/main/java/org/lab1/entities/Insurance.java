@@ -1,18 +1,20 @@
 package org.lab1.entities;
 
-import java.util.Date;
 import java.util.List;
+import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.UUID;
 
-public class Insurance {
+public class Insurance implements Comparable<Insurance> {
 	private UUID id;
 	private Client client;
 	private List<InsuredObject> objects;
 	private List<InsuranceType> types;
 	private Worker worker;
-	private Date term;
+	private LocalDateTime term;
 	private double size;
+
+	public Insurance() {}
 
 	public static InsuranceBuilder builder() {
 		return new InsuranceBuilder();
@@ -43,7 +45,7 @@ public class Insurance {
 		return Objects.hash(getClient(), getWorker());
 	}
 
-	public Insurance(UUID id, Client client, List<InsuredObject> objects, List<InsuranceType> types, Worker worker, Date term, double size) {
+	public Insurance(UUID id, Client client, List<InsuredObject> objects, List<InsuranceType> types, Worker worker, LocalDateTime term, double size) {
 		this.setId(id);
 		this.setClient(client);
 		this.setObjects(objects);
@@ -73,7 +75,7 @@ public class Insurance {
 		return this.worker;
 	}
 
-	public Date getTerm() {
+	public LocalDateTime getTerm() {
 		return this.term;
 	}
 
@@ -101,12 +103,17 @@ public class Insurance {
 		this.worker = worker;
 	}
 
-	public void setTerm(Date term) {
+	public void setTerm(LocalDateTime term) {
 		this.term = term;
 	}
 
 	public void setSize(double size) {
 		this.size = size;
+	}
+
+	@Override
+	public int compareTo(Insurance other) {
+		return Double.compare(this.getSize(), other.getSize());
 	}
 
 	public static class InsuranceBuilder {
@@ -115,7 +122,7 @@ public class Insurance {
 		private List<InsuredObject> objects;
 		private List<InsuranceType> types;
 		private Worker worker;
-		private Date term;
+		private LocalDateTime term;
 		private double size;
 
 		InsuranceBuilder() {
@@ -146,7 +153,7 @@ public class Insurance {
 			return this;
 		}
 
-		public InsuranceBuilder term(Date term) {
+		public InsuranceBuilder term(LocalDateTime term) {
 			this.term = term;
 			return this;
 		}

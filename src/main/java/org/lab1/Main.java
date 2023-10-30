@@ -5,10 +5,8 @@ import org.lab1.serializers.JsonSerializer;
 import org.lab1.serializers.SerializationException;
 import org.lab1.serializers.TxtSerializer;
 import org.lab1.serializers.XmlSerializer;
-import org.lab1.services.ClientService;
 
 import java.time.LocalDateTime;
-import java.util.*;
 
 public class Main {
 	public static void main(String[] args) throws SerializationException {
@@ -25,13 +23,6 @@ public class Main {
 				.setEmail("delamakcima1@gmail.com")
 				.build();
 
-		List<Client> clients = new ArrayList<>();
-		clients.add(client1);
-		clients.add(client2);
-
-		ClientService clientService = new ClientService(clients);
-		System.out.println("-------------Service debug---------------");
-		clientService.sortClientsWithStream().forEach(System.out::println);
 		TxtSerializer<Client> txtSerializer = new TxtSerializer<Client>();
 		txtSerializer.serialize(client1, "test.txt");
 		System.out.println("-------------TxtSerializer debug---------------");

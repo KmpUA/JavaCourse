@@ -63,6 +63,10 @@ public class Client implements Comparable<Client> {
 		return this.email;
 	}
 
+	public String getFullName(){
+		return this.firstName + " " + this.lastName;
+	}
+
 	public static class Builder {
 		private final String firstName;
 		private final String lastName;

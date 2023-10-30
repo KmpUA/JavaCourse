@@ -35,8 +35,8 @@ public class InsuranceType {
 		return Objects.hash(type, description);
 	}
 
-	public InsuranceType(UUID id, String type, String description, double monthPayment) {
-		this.setId(id);
+	public InsuranceType(String type, String description, double monthPayment) {
+		this.setId(UUID.randomUUID());
 		this.type = type;
 		this.description = description;
 		this.monthPayment = monthPayment;
@@ -104,7 +104,7 @@ public class InsuranceType {
 		}
 
 		public InsuranceType build() {
-			return new InsuranceType(this.id, this.type, this.description, this.monthPayment);
+			return new InsuranceType(this.type, this.description, this.monthPayment);
 		}
 
 		public String toString() {

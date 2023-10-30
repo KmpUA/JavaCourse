@@ -72,6 +72,10 @@ public class Worker extends PersonalParticulars implements Comparable<Worker>{
 		else return this.lastName.charAt(0) - o.lastName.charAt(0);
 	}
 
+	public String getFullName(){
+		return this.firstName + " " + this.lastName;
+	}
+
 	public static class Builder {
 		@Size(min = 4, max = 20, message
 				= "About Me must be between 4 and 20 characters")
