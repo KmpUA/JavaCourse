@@ -1,30 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="servlet" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="282f44b1-9e67-4f22-80f4-e3f22960e6be" name="Changes" comment="Serializer fix&#10;Comparable/Comparator &#10;Model fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/dao/MySQLConnector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/impl/InsuranceTypeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/impl/InsuredObjectServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/services/InsuranceTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/services/InsuredObjectService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/lab1/impl/InsuranceManagementServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/lab1/impl/InsuranceTypesServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/lab1/impl/InsuredObjectServiceImplTest.java" afterDir="false" />
+    <list default="true" id="282f44b1-9e67-4f22-80f4-e3f22960e6be" name="Changes" comment="Service methods">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/dao/PSQLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/dao/QueryTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/dao/SecurePSQLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/dao/annotation/Adult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/dao/annotation/AgeValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/dao/annotation/Column.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/dao/annotation/Condition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/dao/annotation/Table.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/service/ClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/service/impl/ClientServiceImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/servlet/ClientServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab1/utility/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/META-INF/context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Insurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Insurance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/InsuranceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/InsuranceType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/impl/InsuranceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/impl/InsuranceManagementServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/services/ClientService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/services/InsuranceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/services/InsuranceManagementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/services/WorkerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/lab1/impl/InsuranceServiceImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/lab1/services/ClientServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entity/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Education.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entity/Education.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Insurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entity/Insurance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/InsurancePayouts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entity/InsurancePayouts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/InsuranceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entity/InsuranceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/InsuredObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entity/InsuredObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/PersonalParticulars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entity/PersonalParticulars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entities/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entity/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/impl/InsuranceManagementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/service/impl/InsuranceManagementServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/impl/InsuranceTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/service/impl/InsuranceTypeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/impl/InsuredObjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/service/impl/InsuredObjectServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/EntitySerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializer/EntitySerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/JsonSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializer/JsonSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/LocalDateTimeTypeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializer/LocalDateTimeTypeAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/SerializationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializer/SerializationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/TxtSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializer/TxtSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/serializers/XmlSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/serializer/XmlSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/services/InsuranceManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/service/InsuranceManagementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/services/InsuranceTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/service/InsuranceTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/services/InsuredObjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/service/InsuredObjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/lab1/entities/ClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/lab1/entity/ClientTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/lab1/impl/InsuranceManagementServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/lab1/impl/InsuranceManagementServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/lab1/impl/InsuranceTypesServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/lab1/impl/InsuranceTypesServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/lab1/impl/InsuredObjectServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/lab1/impl/InsuredObjectServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/lab1/serializers/JsonSerializerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/lab1/serializer/JsonSerializerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/lab1/serializers/TxtSerializerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/lab1/serializer/TxtSerializerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/lab1/serializers/XmlSerializerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/lab1/serializer/XmlSerializerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +93,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="TestNG Test Class" />
+        <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -79,6 +118,13 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -99,29 +145,41 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;TestNG&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG&quot;: &quot;&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/delam/Downloads/mysql-connector-j-8.1.0.zip&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/delam/JavaLabs/Variant17/web/WEB-INF/lib&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+      &quot;mysql&quot;,
+      &quot;postgresql&quot;
     ]
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\delam\JavaLabs\Variant17\web\WEB-INF\lib" />
+      <recent name="C:\Users\delam\JavaLabs\Variant17\web\WEB-INF\servlets" />
+      <recent name="C:\Users\delam\JavaLabs\Variant17\web\WEB-INF\classes" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\delam\JavaLabs\Variant17\web\WEB-INF\lib" />
+      <recent name="C:\Users\delam\JavaLabs\Variant17\web\WEB-INF" />
+      <recent name="C:\Users\delam\JavaLabs\Variant17\web" />
+      <recent name="C:\Users\delam\JavaLabs\Variant17\web\WEB-INF\clients" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.lab1.impl" />
@@ -130,7 +188,7 @@
       <recent name="org.lab1.entities" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Smart Tomcat.InsuranceWeb">
     <configuration name="Insurance" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -141,8 +199,200 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tomcat11" type="TomeeConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="TomEE " ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="17">
+      <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="6118d150-4fed-4e7f-8427-48d8b4f8b93f" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="55408" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Servlet" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat " ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="17">
+      <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="762606d1-b2b5-4764-9ef0-63d6bce287f3" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="54292" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="InsuranceWeb" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="catalinaBase" value="C:\Users\delam\.SmartTomcat\Variant17\Variant17" />
+      <option name="contextPath" value="/myapp" />
+      <option name="docBase" value="C:\Users\delam\JavaLabs\Variant17\web\WEB-INF" />
+      <option name="extraClassPath" value="" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/9.0.83" />
+          <option name="path" value="$PROJECT_DIR$/../../../../Program Files/Apache Software Foundation/Tomcat 9.0" />
+          <option name="version" value="9.0.83.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="Variant17" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Insurance" />
+      <item itemvalue="Smart Tomcat.InsuranceWeb" />
+      <item itemvalue="Tomcat Server.Servlet" />
+      <item itemvalue="TomEE Server.Tomcat11" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -191,6 +441,23 @@
       <workItem from="1697992009352" duration="55000" />
       <workItem from="1698591502812" duration="4544000" />
       <workItem from="1698657038219" duration="745000" />
+      <workItem from="1698658035352" duration="83000" />
+      <workItem from="1698670581864" duration="617000" />
+      <workItem from="1699007712869" duration="5000" />
+      <workItem from="1699790843014" duration="8476000" />
+      <workItem from="1699869440078" duration="820000" />
+      <workItem from="1699870634624" duration="1999000" />
+      <workItem from="1699872647062" duration="122000" />
+      <workItem from="1699873097427" duration="300000" />
+      <workItem from="1699879645018" duration="2249000" />
+      <workItem from="1699881904272" duration="292000" />
+      <workItem from="1699882205120" duration="253000" />
+      <workItem from="1700910137202" duration="4544000" />
+      <workItem from="1700914690269" duration="1903000" />
+      <workItem from="1700916605824" duration="886000" />
+      <workItem from="1700919097797" duration="42000" />
+      <workItem from="1700949134430" duration="48000" />
+      <workItem from="1701077548604" duration="8094000" />
     </task>
     <task id="LOCAL-00002" summary="Lab0 final variant">
       <option name="closed" value="true" />
@@ -232,7 +499,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697481515731</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Service methods">
+      <option name="closed" value="true" />
+      <created>1698658113475</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1698658113475</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +537,11 @@
     <MESSAGE value="Lab0 final" />
     <MESSAGE value="Serializer fixes and Comparator/Stream lab" />
     <MESSAGE value="Serializer fix&#10;Comparable/Comparator &#10;Model fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Serializer fix&#10;Comparable/Comparator &#10;Model fix" />
+    <MESSAGE value="Service methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Service methods" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

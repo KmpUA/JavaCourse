@@ -1,10 +1,11 @@
 package org.lab1.impl;
 
+import org.lab1.service.impl.InsuranceTypeServiceImpl;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import org.lab1.entities.Insurance;
-import org.lab1.entities.InsuranceType;
-import org.lab1.services.InsuranceTypeService;
+import org.lab1.entity.Insurance;
+import org.lab1.entity.InsuranceType;
+import org.lab1.service.InsuranceTypeService;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

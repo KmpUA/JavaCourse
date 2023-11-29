@@ -1,10 +1,11 @@
 package org.lab1.impl;
 
-import org.lab1.entities.*;
+import org.lab1.entity.*;
+import org.lab1.service.impl.InsuredObjectServiceImpl;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import org.lab1.services.InsuredObjectService;
+import org.lab1.service.InsuredObjectService;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
