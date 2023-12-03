@@ -10,13 +10,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.ResultSet;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
-@WebServlet(name = "myapp", urlPatterns = "/index")
+@WebServlet("/clients")
 public class ClientServlet extends HttpServlet {
 	private ClientService clientService;
 
@@ -30,11 +33,12 @@ public class ClientServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
-			request.setAttribute("clients", clientService.findAll());
+			ResultSet resultSet = clientService.findAll();
+			request.setAttribute("clients", resultSet);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
-		request.getRequestDispatcher("/index.jsp").forward(request, response);
+		request.getRequestDispatcher("/clients.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -99,6 +103,6 @@ public class ClientServlet extends HttpServlet {
 			}
 		}
 
-		response.sendRedirect(request.getContextPath() + "/index");
+		response.sendRedirect(request.getContextPath() + "/clients");
 	}
 }

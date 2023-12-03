@@ -1,117 +1,101 @@
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="java.sql.SQLException" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Clients</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Company</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
     <style>
-        table {
-            border-collapse: collapse;
-            width: 80%;
-            margin: 0 auto; /* Center the table */
+        body {
+            padding-top: 50px;
         }
-        th, td {
-            border: 1px solid #ddd; /* Add borders to table cells */
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .add_form{
-            display: flex;
-            flex-direction: column;
-            padding: 15px;
-            margin: 15px auto; /* Center the form */
-            width: 50%;
-        }
-        input[type="text"], input[type="date"] {
-            margin-bottom: 10px;
-            padding: 8px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-        button[type="submit"] {
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            background-color: #28a745;
-            color: white;
-            cursor: pointer;
+
+        .jumbotron {
+            background-color: #f8f9fa;
+            padding: 80px 20px;
+            margin-bottom: 0;
         }
     </style>
 </head>
+
 <body>
 
-<div class="container">
-    <h1>Clients</h1>
-    <table>
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Birthdate</th>
-            <th>Address</th>
-            <th>Phone number</th>
-            <th>Email</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        <jsp:useBean id="clients" scope="request" type="java.sql.ResultSet"/>
-        <%
-            try {
-                java.sql.ResultSetMetaData result = clients.getMetaData();
-                int columnsNumber = result.getColumnCount();
-                while (clients.next()) {
-                    List<String> list = new ArrayList<>();
-                    for (int i = 1; i <= columnsNumber; i++) {
-                        String columnValue = clients.getString(i);
-                        list.add(columnValue);
-                    }
-        %>
-        <tr>
-            <td><%= list.get(0) %></td>
-            <td><%= list.get(1) %></td>
-            <td><%= list.get(2) %></td>
-            <td><%= list.get(3) %></td>
-            <td><%= list.get(4) %></td>
-            <td><%= list.get(5) %></td>
-            <td><%= list.get(6) %></td>
-            <td style="display: flex; flex-direction: column">
-                <a href="#" class="btn btn-info">Edit</a>
-                <form action="" method="post">
-                    <input type="hidden" name="action" value="delete">
-                    <input type="hidden" name="clientId" value=<%= list.get(0) %>>
-                    <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
-            </td>
-        </tr>
-        <%
-                }
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-        %>
-        </tbody>
-    </table>
-    <form class="add_form" action="" method="post">
-        <input type="hidden" name="action" value="add">
-        <input type="text" name="firstName" placeholder="First name">
-        <input type="text" name="lastName" placeholder="Last name">
-        <input type="date" name="birthdate" placeholder="Date of birth">
-        <input type="text" name="address" placeholder="Address">
-        <input type="text" name="phoneNumber" placeholder="Phone number">
-        <input type="text" name="email" placeholder="Email">
-        <button type="submit">Add Client</button>
-    </form>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Insurance Company</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="clients.jsp">Clients</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to our Insurance Company</h1>
+    <p class="lead">Providing reliable insurance solutions for your needs</p>
+    <a class="btn btn-primary btn-lg" href="#contact" role="button">Get a Quote</a>
 </div>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- About Section -->
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">About Us</h2>
+                <p class="text-muted">Brief description of your insurance company and its mission.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">Our Services</h2>
+                <p class="text-muted">List of services offered by your company.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">Contact Us</h2>
+                <p class="text-muted">Get in touch with us for inquiries or assistance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</script>
 </body>
+
 </html>

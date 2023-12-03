@@ -10,8 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="282f44b1-9e67-4f22-80f4-e3f22960e6be" name="Changes" comment="implemented client service, added database connection and created test servlet">
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/clients.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/error.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/entity/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lab1/servlet/ClientServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lab1/servlet/ClientServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/update.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +102,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;TestNG&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG&quot;: &quot;&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/delam/JavaLabs/Variant17/web/WEB-INF/lib&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/delam/JavaLabs/Variant17/web/WEB-INF/classes&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
@@ -117,9 +122,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\delam\JavaLabs\Variant17\web\WEB-INF\classes" />
       <recent name="C:\Users\delam\JavaLabs\Variant17\web\WEB-INF\lib" />
       <recent name="C:\Users\delam\JavaLabs\Variant17\web\WEB-INF\servlets" />
-      <recent name="C:\Users\delam\JavaLabs\Variant17\web\WEB-INF\classes" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -601,6 +606,7 @@
       <workItem from="1700949134430" duration="48000" />
       <workItem from="1701077548604" duration="8094000" />
       <workItem from="1701281143147" duration="69000" />
+      <workItem from="1701596983370" duration="1235000" />
     </task>
     <task id="LOCAL-00002" summary="Lab0 final variant">
       <option name="closed" value="true" />

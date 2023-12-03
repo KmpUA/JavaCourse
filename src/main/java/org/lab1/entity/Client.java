@@ -78,6 +78,7 @@ public class Client implements Comparable<Client> {
 	}
 
 	public static class Builder {
+		private UUID id;
 		private final String firstName;
 		private final String lastName;
 		private final LocalDateTime birthdate;
@@ -100,6 +101,12 @@ public class Client implements Comparable<Client> {
 		public Builder setAddress(String value) {
 			if (address == null) throw new IllegalArgumentException("Null argument");
 			else address = value;
+			return this;
+		}
+
+		public Builder setId(String value) {
+			if (value == null) throw new IllegalArgumentException("Null argument");
+			else id = UUID.fromString(value);
 			return this;
 		}
 
@@ -127,13 +134,17 @@ public class Client implements Comparable<Client> {
 	}
 
 	public Client(Builder builder) {
-		id = UUID.randomUUID();
-		firstName = builder.firstName;
-		lastName = builder.lastName;
-		birthdate = builder.birthdate;
-		address = builder.address;
-		phoneNumber = builder.phoneNumber;
-		email = builder.email;
+		if(builder.id != null){
+			id = builder.id;
+		} else {
+			id = UUID.randomUUID();
+			firstName = builder.firstName;
+			lastName = builder.lastName;
+			birthdate = builder.birthdate;
+			address = builder.address;
+			phoneNumber = builder.phoneNumber;
+			email = builder.email;
+		}
 	}
 
 	public Client() {
