@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # JavaCourse
 
 CHNU 3rd year of study Java Course.
@@ -22,3 +23,6 @@ in which this 2 interfaces have to be used. Also, we have make analogical method
 **4 Task** - ```we are going back to class hierarchy: we have to make fields validation using any possible
 way. For example, we can use jakarta's validation, or the second way is to validate every field
 yourself inside Builder.```
+=======
+# JavaCourse
+>>>>>>> 9eff5c017c49f69eded4116c369e9b4bef8e0ed0
